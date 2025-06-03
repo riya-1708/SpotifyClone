@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Circular Std', system-ui, Arial, sans-serif;
+}
+
+.left {
+    width: 25vw;
+    padding: 10px;
+}
+
+.right {
+    width: 75vw;
+}
+
+
+
+nav ul li{
+    gap:15px;
+    list-style-type: none;
+    
+}
+
+.global-nav-bar {
+    background: #121212;
+    padding: 6px 8px;
+    border-radius: 8px;
+    width: 100vw;
+    min-height: 60px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.spotify-logo {
+    width: 37px;
+    margin-right: 14px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-link {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.98rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 11px;
+    border-radius: 24px;
+    transition: color 0.2s , transform 0.2s;
+}
+
+.nav-link.active, .nav-link:hover {
+    color: #fff;
+    /* background: #232323; */
+    transform: scale(1.1)
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+}
+
+.download-icon {
+    width: 15px;
+    height: 15px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    background: #242424;
+    border-radius: 20px;
+    padding: 2px 12px;
+    margin-left: 8px;
+    width: 410px;
+    height: 40px;
+}
+
+.search-input {
+    background: #242424;
+    border: none;
+    border-radius: 16px;
+    padding: 8px 16px;
+    /* color: #fff; */
+    font-size: 1rem;
+    width: 220px;
+    outline: none;
+    transition: background 0.2s;
+}
+
+.search-bar{
+    background: none;
+    border:none;
+    color: #fff;
+    font-size: 1rem;
+    width: 100%;
+    padding: 8px 0 8px 8px;
+    outline: none;
+}
+
+.search-bar::placeholder {
+    color: #b3b3b3;
+    opacity: 1;
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-center .nav-link {
+    font-size: 0.93rem;
+    padding: 4px 5px;
+    font-weight: 500;
+}
+
+.divider {
+    background: #fff;
+    height: 25px;
+    margin: 16px;
+    width: 1px;
+}
+.install-app {
+    
+    
+    padding: 6px 16px;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 8px;
+    transition: background 0.2s;
+    font-size: 0.93rem;
+}
+
+.install-app:hover {
+    /* background: #333; */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn {
+    border: none;
+    border-radius: 20px;
+    
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.signup-btn {
+    padding: 8px 15px;
+    background: transparent;
+    color: #b3b3b3;
+    font-size: 0.98rem;
+}
+.signup-btn:hover {
+    color: #fff;
+    background: #232323;
+}
+
+.login-btn {
+    background: #fff;
+    padding: 11px 28px;
+    color: #121212;
+    font-size: 0.98rem;
+}
+.login-btn:hover {
+    background: #1db954;
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .global-nav-bar {
+        flex-direction: column;
+        gap: 16px;
+        padding: 12px;
+        min-height: unset;
+    }
+    .nav-left, .nav-center, .nav-right {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .search-form {
+        width: 100%;
+    }
+    .search-bar {
+        width: 100%;
+    }
+}
+
+.container {
+    padding-top: 70px;
+}
+
