@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scrollable Sections</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .scroll-container {
+      width: 100%;
+      max-height: 150px; /* Scroll height limit */
+      overflow-y: auto;  /* Enables vertical scroll */
+      padding: 10px;
+      
+    }
+
+    section {
+      padding: 15px;
+      margin-bottom: 10px;
+      background-color: white;
+      border: 1px solid #ddd;
+    }
+
+     .scroll-container::-webkit-scrollbar {
+      width: 15px;
+    }
+
+    .scroll-container::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+      background-color: rgb(190, 187, 187);
+      
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>My Scrollable Content</h2>
+
+  <div class="scroll-container">
+    <section>
+      <h3>Section 1</h3>
+      <p>This is the first section inside the scrollable container. Add your content here.</p>
+    </section>
+
+    <section>
+      <h3>Section 2</h3>
+      <p>This is the second section. Add more content and see how scrolling works.</p>
+    </section>
+  </div>
+
+</body>
+</html>

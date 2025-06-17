@@ -7,6 +7,7 @@ body {
     background-color: #000;
     color: #fff;
     font-family: 'Circular Std', system-ui, Arial, sans-serif;
+    overflow: hidden;
 }
 
 .left {
@@ -198,28 +199,279 @@ nav ul li{
     color: #fff;
 }
 
-@media (max-width: 900px) {
-    .global-nav-bar {
-        flex-direction: column;
-        gap: 16px;
-        padding: 12px;
-        min-height: unset;
-    }
-    .nav-left, .nav-center, .nav-right {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        align-items: flex-start;
-    }
-    .search-form {
-        width: 100%;
-    }
-    .search-bar {
-        width: 100%;
-    }
-}
 
 .container {
     padding-top: 70px;
 }
+.library {
+    display: flex;
+    font-weight: bolder;
+    padding: 8px;
+    width: 35%;
+    /* height: 80vh; */
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+   
+
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    position:relative;
+    
+    /* bottom:35px; */
+    padding:25px 15px;
+    
+}
+.links{
+    display: flex;
+    gap: 8px;
+    font-weight: lighter;
+    flex-wrap: wrap;
+}
+
+.footer a {
+    
+   font-size: small;
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 16px;
+}
+
+.globeiconbutton{
+    position: relative;
+    background-color: #121212;
+    color: #fff;
+    border: 1px solid #7c7c7c;
+    border-radius:15px;
+    padding:6px 12px;
+    gap:8px;
+    font-size:14px;
+    font-weight: bold;
+    /* top:30px; */
+}
+.globeicon{
+   
+    width: 16px;
+    height: 16px;
+    
+}
+
+.main-menu{
+    width:65%;
+    padding:16px;
+}
+
+.section-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: 0;
+    padding: 0 0;
+    min-height:30vh;
+   
+  
+}
+
+.box-design{
+     
+     display: flex;
+     flex-direction: column;
+      background-color: #1f1f1f;
+      border-radius: 8px;
+      margin: 8px 0;
+      padding: 16px 20px;
+      gap: 20px;
+      
+      
+     
+}
+.box-design h5{
+    font-size:15px;
+    font-weight: lighter;
+    color: #fff;
+    margin-top:10px;
+}
+
+.box-design button{
+    border-radius: 15px;
+    padding: 8px 14px;
+    border: none;
+    font-size:12px;
+    font-weight: bold;
+}
+
+.scroll-container {
+      width: 100%;
+      max-height: 150px; /* Scroll height limit */
+      overflow-y: auto;  /* Enables vertical scroll */
+      margin-top: 30px;
+    }
+
+ .scroll-container::-webkit-scrollbar {
+      width: 15px;
+    }
+
+    .scroll-container::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+      background-color: rgb(190, 187, 187);
+      
+    }
+    .style-library{
+        padding-top: 16px;
+        margin-left: 18px;
+        font-size: larger;
+       
+    }
+
+    .signup-footer{
+        background-image: linear-gradient(90deg, #af2896, #509bf5);
+        width: 100%;
+        align-items:center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 11px 24px 7px 15px;
+        font-weight: bolder;
+    }
+
+    .signup-button{
+        padding: 12px 20px;
+        border-radius: 25px; 
+        border: none;
+        font-weight: bold;
+        font-size: medium;
+    }
+
+
+
+.main-menu h2{
+    padding: 16px;
+}
+
+.cardContainer {
+    margin: 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 60vh; 
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 180px;
+    padding: 8px;
+    border-radius: 5px;
+    position: relative;
+   
+}
+
+.imgContainer{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.card>* {
+    padding-top: 6px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+    border-radius:5%/8%;
+}
+.title{
+    font-size: 18px;
+    font-weight:500;
+    }
+.span-hover span:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.card:hover {
+      background-color: #252525;
+      cursor: pointer;
+    }
+
+.play-button {
+    position:absolute;
+    padding:12px;
+    border:0;
+    bottom:-40px;
+    opacity: 0; 
+    pointer-events: none; 
+    background-color:#1fdf64;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: bottom 0.3s ease;
+}
+
+.card:hover .play-button {
+  opacity: 1; 
+  bottom: 8px; 
+  right: 8px;
+  
+}
+.play-button-icon{
+    width: 30px;
+    height: 30px;
+    
+}
+
+.list-trendingsongs{
+    gap:5px
+}
+
+.scroll-container-for-cards {
+ width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  cursor: grab;
+}
+
+.scroll-content-for-cards {
+  display: flex;
+  gap: 16px;
+  /* padding: 16px; */
+  user-select: none;
+}
+
+.scroll-container:active {
+  cursor: grabbing;
+}
+.scrollable-element::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari, and Opera */
+}
+
+/* button.scroll-left,
+button.scroll-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+button.scroll-left {
+  left: 10px;
+} */
+
 

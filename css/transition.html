@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll Color Transition</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    h2 {
+      position: sticky;
+      top: 0;
+      background-color: white;
+      padding: 10px;
+      z-index: 2;
+    }
+
+    .scroll-container {
+      height: 300px;
+      overflow-y: auto;
+      transition: background-color 0.5s ease;
+      padding: 1rem;
+    }
+
+    .section {
+      height: 400px;
+      margin-bottom: 20px;
+      background-color: #eee;
+    }
+
+    .scrolled {
+      background-color: #d6eaf8; /* light blue when scrolled */
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Scroll to See Color Change</h2>
+  <div class="scroll-container" id="scrollBox">
+    <div class="section">Section 1</div>
+    <div class="section">Section 2</div>
+    <div class="section">Section 3</div>
+  </div>
+
+  <script>
+    const scrollBox = document.getElementById('scrollBox');
+
+    scrollBox.addEventListener('scroll', () => {
+      if (scrollBox.scrollTop > 10) {
+        scrollBox.classList.add('scrolled');
+      } else {
+        scrollBox.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>
